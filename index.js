@@ -13,6 +13,8 @@ app.use(limiter);
 
 app.get("/", (req, resp) => {
 
+  console.log('requested')
+
   getStatus()
     .then(status => {
       resp.json(status)
